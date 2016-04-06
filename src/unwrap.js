@@ -5,9 +5,8 @@
  * @param {Element} wrapper - The HTML element to wrap each item with.
  *
  * @example
- * var anchors = document.querySelector('a');
  * var wrapper = document.createELement('div');
- * wrap(anchors, wrapper);
+ * unwrap(wrapper);
  */
 function unwrap(wrapper) {
 	// get the element's parent node

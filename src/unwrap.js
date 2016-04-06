@@ -1,17 +1,15 @@
 /**
  * Removes the specified element from the DOM while leaving its children in place.
  *
- * @public
- * @static
  * @param {Element[]} elems - An array of HTML elements.
  * @param {Element} wrapper - The HTML element to wrap each item with.
  *
  * @example
  * var anchors = document.querySelector('a');
- * var wrapper = document.createELement('strong');
- * HsbcUi.Utils.wrap(anchors, wrapper);
+ * var wrapper = document.createELement('div');
+ * wrap(anchors, wrapper);
  */
-static unwrap(wrapper) {
+function unwrap(wrapper) {
 	// get the element's parent node
 	const parent = wrapper.parentNode;
 

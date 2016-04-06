@@ -22,7 +22,7 @@ describe('isNumeric()', function() {
 
 	});
 
-	it('should return true when the value is numeric', function() {
+	it('should return false when the value is not numeric', function() {
 
 		// Test cases for failure
 		var invalidValues = [

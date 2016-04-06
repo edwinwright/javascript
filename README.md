@@ -1,1 +1,3 @@
-# utils
+# Utils
+
+Utility functions.

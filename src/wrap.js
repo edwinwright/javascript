@@ -1,17 +1,15 @@
 /**
  * Wraps each element passed to it in the specified DOM element.
  *
- * @public
- * @static
  * @param {Element|Element[]} elems - A single DOM element or an array of DOM elements.
  * @param {Element} wrapper - The DOM element to wrap each item with.
  *
  * @example
- * var anchors = document.querySelector('a');
- * var wrapper = document.createELement('strong');
- * HsbcUi.Utils.wrap(anchors, wrapper);
+ * var anchor = document.querySelector('a');
+ * var wrapper = document.createELement('div');
+ * wrap(anchor, wrapper);
  */
-static wrap(elems, wrapper) {
+function wrap(elems, wrapper) {
 	// Convert `elems` to an array, if necessary.
 	const elements = (!elems.length) ? [elems] : elems;
 

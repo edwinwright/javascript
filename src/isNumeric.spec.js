@@ -3,6 +3,8 @@ import isNumeric from './isNumeric';
 /** @test {isNumeric} */
 describe('isNumeric()', function() {
 
+  it('a pending spec');
+
 	it('should return true when the value is numeric', function() {
 
 		// Test cases for success
@@ -43,6 +45,8 @@ describe('isNumeric()', function() {
 			function(){}
 		];
 		invalidValues.forEach(value => expect(isNumeric(value)).toBe(false));
+
+    expect(true).toBe(false);
 
 	});
 

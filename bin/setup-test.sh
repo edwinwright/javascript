@@ -10,6 +10,15 @@ npm install --save-dev \
 	jasmine \
 	jasmine-core \
 	karma \
+
+  karma-coverage \
+  karma-spec-reporter \
+  karma-html-reporter \
+  karma-sourcemap-loader \
+  istanbul-instrumenter-loader \
+  karma-chrome-launcher \
+
+
 	karma-jasmine \
 	karma-phantomjs-launcher \
 	karma-webpack \

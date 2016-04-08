@@ -4,6 +4,6 @@
  * @param {*} value - Any value.
  * @return {boolean}
  */
-function isNumeric(value) {
+export default function isNumeric(value) {
 	return (!isNaN(parseFloat(value)) && isFinite(value)) ? true : false;
 }

@@ -8,7 +8,7 @@
  * var wrapper = document.createELement('div');
  * unwrap(wrapper);
  */
-function unwrap(wrapper) {
+export default function unwrap(wrapper) {
 	// get the element's parent node
 	const parent = wrapper.parentNode;
 

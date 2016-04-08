@@ -9,7 +9,7 @@
  * var wrapper = document.createELement('div');
  * wrap(anchor, wrapper);
  */
-function wrap(elems, wrapper) {
+export default function wrap(elems, wrapper) {
 	// Convert `elems` to an array, if necessary.
 	const elements = (!elems.length) ? [elems] : elems;
 

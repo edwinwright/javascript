@@ -3,8 +3,8 @@
 // https://medium.com/@scbarrus/how-to-get-test-coverage-on-react-with-karma-babel-and-webpack-c9273d805063#.uk45m1lol
 
 var karmaConfig = {
-  // browsers: ['PhantomJS'],
-  browsers: ['Chrome'],
+  browsers: ['PhantomJS'],
+  // browsers: ['Chrome'],
 
   frameworks: ['jasmine'],
 
@@ -12,23 +12,13 @@ var karmaConfig = {
     { pattern: 'tests.webpack.js', watched: false }
   ],
 
-  plugins: [
-    'karma-chrome-launcher',
-    'karma-coverage',
-    'karma-html-reporter',
-    'karma-jasmine',
-    'karma-phantomjs-launcher',
-    'karma-sourcemap-loader',
-    'karma-spec-reporter',
-    'karma-webpack',
-  ],
-
   reporters: [
-    'spec',
-    'html',
-    'coverage',
+    'spec',       // generates console spec report
+    'html',       // generates html spec report
+    'coverage',   // generates html coverage report
   ],
 
+  // Configure console spec reporter
   specReporter: {
     maxLogLines: 2,
     suppressErrorSummary: true,
@@ -38,16 +28,19 @@ var karmaConfig = {
     showSpecTiming: true
   },
 
+  // Configure html spec reporter
   htmlReporter: {
     outputDir: 'reports/unit-tests',
   },
 
+  // Configure html coverage reporter
   coverageReporter: {
     includeAllSources: true,
+    dir : 'reports/coverage',
     reporters: [
-      {type: 'text-summary'},
-      {type: 'clover', dir: 'reports', subdir: '.', file: 'clover.xml'},
-      {type: 'html', dir: 'reports/code-coverage/'},
+      {type: 'text-summary'},   // generates console coverage report
+      {type: 'html'},           // generates html coverage report
+      {type: 'clover', subdir: '.', file: 'clover.xml'},
     ],
   },
 
@@ -55,20 +48,32 @@ var karmaConfig = {
     'tests.webpack.js': ['webpack', 'sourcemap']
   },
 
-
   // https://webpack.github.io/docs/loaders.html
   webpack: {
+    devtool: 'inline-source-map',
+
     module: {
+
+      preLoaders: [
+        {
+          test: /\.js$/,
+          loader: 'eslint',
+        }
+      ],
+      
       loaders: [{
-        test: /\.js/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      }],
-      postLoaders: [{ //delays coverage til after tests are run, fixing transpiled source coverage error
         test: /\.js$/,
-        exclude: /(test|node_modules|bower_components)\//,
+        exclude: /node_modules/,
+        loader: 'babel-loader'  
+      }],
+      
+      // Delays coverage until after tests are run, fixing transpiled source coverage error
+      postLoaders: [{
+        test: /^(.(?!\.spec))*\.js$/,
+        include: /src/,
         loader: 'istanbul-instrumenter'
-      }]
+      }],
+
     },
 
     watch: true

@@ -1,22 +1,22 @@
 {
-  "name": "utils",
+  "name": "js-lib",
   "version": "1.0.0",
-  "description": "Utility functions.",
+  "description": "Personal  JS library.",
   "main": "index.js",
   "scripts": {
     "test": "karma start"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edwinwright/utils.git"
+    "url": "git+https://github.com/edwinwright/js-lib.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/edwinwright/utils/issues"
+    "url": "https://github.com/edwinwright/js-lib/issues"
   },
-  "homepage": "https://github.com/edwinwright/utils#readme",
+  "homepage": "https://github.com/edwinwright/js-lib#readme",
   "devDependencies": {
     "babel-core": "^6.7.5",
     "babel-loader": "^6.2.4",

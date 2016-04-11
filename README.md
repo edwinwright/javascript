@@ -1,3 +1,1 @@
-# Utils
-
-Utility functions.
+# JavaScript Library

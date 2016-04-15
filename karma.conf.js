@@ -25,7 +25,7 @@ var karmaConfig = {
 
 
   // Register files to load
-  files: 'tests.webpack.js',
+  files: ['tests.webpack.js'],
 
   // Register reporters
   reporters: [

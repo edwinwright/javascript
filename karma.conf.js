@@ -37,9 +37,9 @@ var karmaConfig = {
   // Configure console spec reporter
   specReporter: {
     maxLogLines: 2,
-    suppressErrorSummary: true,
+    suppressErrorSummary: true, // maybe use this during a build and the rest during dev
     suppressFailed: false,
-    suppressPassed: true,
+    suppressPassed: false,
     suppressSkipped: false,
     showSpecTiming: true
   },
@@ -56,7 +56,6 @@ var karmaConfig = {
     reporters: [
       {type: 'text-summary'},
       {type: 'html'},
-      {type: 'clover', subdir: '.', file: 'clover.xml'},
     ],
   },
 
@@ -71,10 +70,8 @@ var karmaConfig = {
 
     module: {
       preLoaders: [
-        // transpile all files except testing sources with babel as usual
         {
           test: /\.js$/,
-          include: /src/,
           loader: 'babel',
           query: {
             presets: ['es2015'],

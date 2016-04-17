@@ -11,9 +11,9 @@ describe('unwrap()', function() {
 		this.wrapper.appendChild(this.elem);
 	});
 
-  it('a pending spec', function()  {
-  	unwrap(this.wrapper);
-  	expect(true).toBe(false);  	
-  });
+	it('a pending spec', function()  {
+		unwrap(this.wrapper);
+		expect(true).toBe(false);  	
+	});
 
 });

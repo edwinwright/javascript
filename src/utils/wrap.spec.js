@@ -10,9 +10,9 @@ describe('wrap()', function() {
 		this.wrapper = document.createElement('div');
 	});
 
-  it('a pending spec', function() {
-  	wrap(this.elem, this.wrapper);
-  	expect(true).toBe(false);
-  });
+	it('a pending spec', function() {
+		wrap(this.elem, this.wrapper);
+		expect(true).toBe(false);
+	});
 
 });

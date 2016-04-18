@@ -5,5 +5,5 @@
  * @return {boolean}
  */
 export default function isNumeric(value) {
-	return (!isNaN(parseFloat(value)) && isFinite(value)) ? true : false;
+	return !isNaN(parseFloat(value)) && isFinite(value);
 }

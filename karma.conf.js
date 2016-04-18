@@ -3,8 +3,6 @@
 // Karma config object
 var karmaConfig = {
 
-
-
   // basePath: './',
   // colors: true,
   // logLevel: 'INFO',
@@ -14,15 +12,11 @@ var karmaConfig = {
   // browserNoActivityTimeout : 60000,
   // singleRun: true,
 
-
-
   // autoWatch: false,
-
 
 
   browsers: ['PhantomJS'],
   frameworks: ['jasmine'],
-
 
   // Register files to load
   files: ['tests.webpack.js'],
@@ -99,4 +93,3 @@ var karmaConfig = {
 module.exports = function(config) {
     config.set(karmaConfig);
 };
-

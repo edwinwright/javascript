@@ -33,7 +33,7 @@ var karmaConfig = {
     maxLogLines: 2,
     suppressErrorSummary: true, // maybe use this during a build and the rest during dev
     suppressFailed: false,
-    suppressPassed: true,
+    suppressPassed: false,
     suppressSkipped: false,
     showSpecTiming: true
   },

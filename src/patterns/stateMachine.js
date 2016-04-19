@@ -1,4 +1,3 @@
-
 /**
  * Adds interaction to a step process component.
  * @class

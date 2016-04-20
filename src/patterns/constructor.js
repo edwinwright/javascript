@@ -41,7 +41,10 @@ export default function WidgetFactory(target) {
 
 
 
-
+/**
+ * Classes are bad - do not use
+ *
+ */
 export class WidgetClass {
 	constructor(target) {
 

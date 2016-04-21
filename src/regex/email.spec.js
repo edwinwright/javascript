@@ -8,6 +8,7 @@ describe('email() regex', function() {
 
   // Test cases for success
   it('should return true when the value is not an email', function() {
+
     const validValues = [
       'email@example.com',
       'firstname.lastname@example.com',
@@ -27,14 +28,17 @@ describe('email() regex', function() {
       'very.unusual.“@”.unusual.com@example.com', // false
       'very.“(),:;<>[]”.VERY.“very@\\ "very”.unusual@strange.example.com', // false
     ];
+
     validValues.forEach(value => {
       let regex = email();
       expect(regex.test(value)).toBe(true);
     });
+
   });
 
   // Test cases for failure
   it('should return false when the value is not an email', function() {
+
     const invalidValues = [
       'plainaddress',
       '#@%^%#$@#$@#.com',
@@ -57,10 +61,12 @@ describe('email() regex', function() {
       'just"not"right@example.com',
       'this\ is"really"not\allowed@example.com',
     ];
+
     invalidValues.forEach(value => {
       let regex = email();
       expect(email().test(value)).toBe(false);
     });
+
   });
 
 });

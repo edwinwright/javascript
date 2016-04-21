@@ -5,6 +5,7 @@ describe('isNumeric()', function() {
 
   // Test cases for success
 	it('should return true when the value is numeric', function() {
+
 		const validValues = [
 			1,
 			+1,
@@ -17,11 +18,14 @@ describe('isNumeric()', function() {
 			Number.MAX_VALUE,
 			Number.MIN_VALUE
 		];
+
 		validValues.forEach(value => expect(isNumeric(value)).toBe(true));
+
 	});
 
 	// Test cases for failure
   it('should return false when the value is not numeric', function() {
+
 		const invalidValues = [
 			'a',
 			'1-2',
@@ -39,7 +43,9 @@ describe('isNumeric()', function() {
 			[],
 			function(){}
 		];
+
 		invalidValues.forEach(value => expect(isNumeric(value)).toBe(false));
+
 	});
 
 });

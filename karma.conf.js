@@ -19,7 +19,10 @@ var karmaConfig = {
   frameworks: ['jasmine'],
 
   // Register files to load
-  files: ['tests.webpack.js'],
+  files: [
+    'spec-helper.js',
+    'tests.webpack.js',
+  ],
 
   // Register reporters
   reporters: [

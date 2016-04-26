@@ -75,7 +75,7 @@ var karmaConfig = {
           },
         },
         {
-          test: /^(.(?!\.spec))*\.js$/,
+          test: /^(?!.+\.spec\.js$).+\.js$/,
           include: /src/,
           loader: 'isparta',
         },

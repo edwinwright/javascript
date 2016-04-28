@@ -37,7 +37,7 @@ var karmaConfig = {
     suppressErrorSummary: true, // maybe use this during a build and the rest during dev
     suppressFailed: false,
     suppressPassed: false,
-    suppressSkipped: false,
+    suppressSkipped: true,
     showSpecTiming: true
   },
 

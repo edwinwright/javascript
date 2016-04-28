@@ -3,7 +3,7 @@ import {email} from './email.js';
 // TODO: Check these emails.
 
 /** @test {email} */
-fdescribe('email() regex', function() {
+describe('email() regex', function() {
 
   beforeAll(function() {
 
@@ -28,7 +28,7 @@ fdescribe('email() regex', function() {
   });
 
   // Test cases for success
-  it('should return true when the value is not an email', function() {
+  xit('should return true when the value is not an email', function() {
 
     const validValues = [
       'email@example.com',
@@ -58,7 +58,7 @@ fdescribe('email() regex', function() {
   });
 
   // Test cases for failure
-  it('should return false when the value is not an email', function() {
+  xit('should return false when the value is not an email', function() {
 
     const invalidValues = [
       'plainaddress',

@@ -20,6 +20,7 @@ var karmaConfig = {
 
   // Register files to load
   files: [
+    'node_modules/babel-polyfill/dist/polyfill.js',
     'spec-helper.js',
     'tests.webpack.js',
   ],
